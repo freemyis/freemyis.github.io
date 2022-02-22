@@ -6,7 +6,7 @@
     <meta name="referrer" content="origin">
     <meta http-equiv="Cache-Control" content="no-transform">
     <meta http-equiv="Cache-Control" content="no-siteapp">
-    <title>Live For Code</title>
+    <title>2022question-resolve-01</title>
 
     <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/LongCang.css">
     <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/Monda.css">
@@ -17,136 +17,93 @@
     <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/Rosario.css">
     <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/UbuntuMono.css">
 
-    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/index.css">
+    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/post.css">
+    
+        <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/normal.css">
+    
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/jquery-3.4.1.min.js"></script>
+
 <meta name="generator" content="Hexo 5.3.0"></head>
 <body>
     <a id="cover"></a>
     <div id="header">
-    <div class="header" >
+    <div class="header">
         <div class="vertical">
             <div class="inner">
-                <h1 class="header-title"></h1>
-                <h2 class="header-description" id="hitokoto"></h2>
-                <h3 class="header-info" id="hitokotoAuthor"></h3>
-                <!--
-                <h1 class="header-subtitle"></h1>
-                <p class="header-subinfo"></p>
-                -->
+                <h1 class="header-subtitle">2022question-resolve-01</h1>
+                <div class="header-subinfo">
+                    <p class="article-info-text">
+                        <span>
+                            <i class="iconfont icon-time"></i> 发表时间：2022-02-22
+                        </span>
+                        
+                            <span id="/2022/02/22/2022question-resolve-01/" class="leancloud_visitors" data-flag-title="2022question-resolve-01">
+                                <i class="iconfont icon-browse"></i> 阅读：<sapn class="leancloud-visitors-count"></span>
+                            </span>
+                        
+                        <span>
+                            <i class="iconfont icon-interactive"></i> 评论：<span class="valine-comment-count" data-xid="/2022/02/22/2022question-resolve-01/"></span>
+                        </span>  
+                    </p>                 
+                </div>
             </div>
         </div>
-        <a class="scroll-down" href="javascript:;" target="_self" data-offset="-45">
-            <span class="hidden">Scroll Down</span>
-            <i class="scroll-down-icon iconfont icon-return"></i>
-        </a>
+        <canvas id="articleHeaderCanvas"></canvas>
     </div>
 </div>
     <div id="container">
     <div id="content">
-        <div class="articles">
-    
-        <div class="article">
-            <div class="article-title">
-                <a href="/2022/02/22/2022question-resolve-01/">2022question-resolve-01</a>
-                
+        <div id="article">
+    <div class="toc"></div>
+    <div class="article-body">
+        <blockquote>
+<h2 id="Tailwind-CSS浅析"><a href="#Tailwind-CSS浅析" class="headerlink" title="Tailwind CSS浅析"></a>Tailwind CSS浅析</h2></blockquote>
+<h3 id="Tailwind-CSS是什么"><a href="#Tailwind-CSS是什么" class="headerlink" title="Tailwind CSS是什么"></a>Tailwind CSS是什么</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Tailwind Css是一个css框架，和bootstrap、elementui一样，可以加速前端开发的工具</span><br></pre></td></tr></table></figure>
+<h3 id="Tailwind-CSS和其他css框架的区别"><a href="#Tailwind-CSS和其他css框架的区别" class="headerlink" title="Tailwind CSS和其他css框架的区别"></a>Tailwind CSS和其他css框架的区别</h3><h4 id="涉及到css发展的阶段性："><a href="#涉及到css发展的阶段性：" class="headerlink" title="涉及到css发展的阶段性："></a>涉及到css发展的阶段性：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">1. 原生写法，直接写到html dom style上或者写在&lt;style&gt;&lt;&#x2F;style&gt;</span><br><span class="line">优点：想咋写咋写，自主性强</span><br><span class="line">缺点：样式没有一个规范，px等数值设置杂乱无章</span><br><span class="line">2. css组件化写法，将UI封装成一个公共组件，样式一致，可复用</span><br><span class="line">优点：提高了组件复用性，需要什么直接拿来用，减少了css和代码，提高开发效率</span><br><span class="line">缺点：通用性太强，无法适用一些特别的、个性化的定制性需求实现，修改需要覆盖组件原有css样式，写法很脏，极不友好</span><br><span class="line">3. css原子化，手动封装常用单个css样式</span><br><span class="line">优点：可以复用css样式(class)，提高开发效率</span><br><span class="line">缺点：需要自己琢磨class命名，容易混乱和命名冲突等</span><br><span class="line"></span><br><span class="line">区别：</span><br><span class="line">bootstrap已经封装好了卡片等组件，Tailwind CSS并未做这件事，仍旧是原子化的，如果需要我们可以基于Tailwind CSS写一套属于自己的定制化框架，定制性极强。</span><br><span class="line">Tailwind CSS优缺点：</span><br><span class="line">优点</span><br><span class="line">1. 基本可以不用再写css,全部用class实现，避免出现不友好的写法。</span><br><span class="line">2. 避免了上面提到的命名苦恼的问题，所有class都是语义化定义好的。</span><br><span class="line">3. 响应式设计，遵循移动优先的设计模式(md: lg:)</span><br><span class="line">4. 默认提供一套专业的色值</span><br><span class="line">5. 可以写鼠标hover等样式实现(:hover，:focus, :active)</span><br><span class="line">6. 可扩展性强，样式重构方便，可以在tailwind.config.js里按照tailwind命名规范定制化自己的通用class实现</span><br><span class="line">7. @base样式？</span><br><span class="line">8. vscode有支持智能提示的插件</span><br><span class="line">9. 支持Dark模式的伪类(dark:...)</span><br></pre></td></tr></table></figure>
+<p><a target="_blank" rel="noopener" href="https://www.tailwindcss.cn/docs/dark-mode">Tailwind CSS深色模式设置</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">缺点</span><br><span class="line">1. class类型过长(解决方案：提取组件？ 使用apply创建抽象css类)</span><br><span class="line">2. 熟悉过程需要成本</span><br></pre></td></tr></table></figure>
+<h3 id="疑问"><a href="#疑问" class="headerlink" title="疑问"></a>疑问</h3><h4 id="tailwind的使用场景，所有项目都要用tailwind嘛"><a href="#tailwind的使用场景，所有项目都要用tailwind嘛" class="headerlink" title="tailwind的使用场景，所有项目都要用tailwind嘛"></a>tailwind的使用场景，所有项目都要用tailwind嘛</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Tailwind CSS 更适合于页面定制化高的场景,一些快速简单交付的项目没必要用，用通用框架开发更快，看定制化情况使用</span><br></pre></td></tr></table></figure>
+<h4 id="tailwind封装了这么多class会不会打包很大-3M多"><a href="#tailwind封装了这么多class会不会打包很大-3M多" class="headerlink" title="tailwind封装了这么多class会不会打包很大(3M多)"></a>tailwind封装了这么多class会不会打包很大(3M多)</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Tailwind CSS 针对这个问题添加了purge,production的时候清除未使用的class样式</span><br></pre></td></tr></table></figure>
+        <p class="suffix-end">__END__</p>
+        <div class="suffix-box">
+            <div class="suffix-box-left">
+                <img src="https://th.bing.com/th/id/R5102bb4130bc53ea61f1e52f015611be?rik=zCKf6FFT7cAfww&riu=http%3a%2f%2fimg.souutu.com%2f2019%2f1125%2f20191125090642454.jpg.400.400.jpg&ehk=LMje%2bhxdVmwW4ATES4toxloKn%2f09I5tOSe0j6IVTkJE%3d&risl=&pid=ImgRaw" alt="redking">
             </div>
-            <div class="article-abstract">
-                
+            <div class="suffix-box-right">
+                <span class="suffix-box-title">文章作者</span>：redking
+                <br>
+                <span class="suffix-box-title">文章出处</span>：<a href="/2022/02/22/2022question-resolve-01/" target="_blank">2022question-resolve-01</a>
+                <br>
+                <span class="suffix-box-title">作者签名</span>：简单地活着, 肆意又精彩.
+                <br>
+                <span class="suffix-box-title">关于主题</span>：<a href="https://github.com/freemyis/blogs.floder" target="_blank">Hexo - freemyis</a>
+                <br>
+                <span class="suffix-box-title">版权声明</span>：文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" title="BY-NC-SA" target="_blank">BY-NC-SA</a> 许可协议，转载请注明出处
+                <br>
             </div>
-            <div class="clear"></div>
-            <div class="article-info">
-                <span>
-                    <i class="iconfont icon-time"></i> 发表时间：2022-02-22
-                </span>
-                
-                    <span id="/2022/02/22/2022question-resolve-01/" class="leancloud_visitors" data-flag-title="2022question-resolve-01">
-                        <i class="iconfont icon-browse"></i> 阅读：<sapn class="leancloud-visitors-count"></span>
-                    </span>
-                
-                <span>
-                    <i class="iconfont icon-interactive"></i> 评论：<span class="valine-comment-count" data-xid="/2022/02/22/2022question-resolve-01/"></span>
-                </span>
-            </div>
-            <div class="clear"></div>     
+            <div style="clear: both;"></div>
         </div>
-    
-        <div class="article">
-            <div class="article-title">
-                <a href="/2021/05/20/webpack-seo-optimized/">webpack项目使用prerender-spa-plugin实现vue单页面打包多页面SEO优化</a>
-                
-            </div>
-            <div class="article-abstract">
-                
-            </div>
-            <div class="clear"></div>
-            <div class="article-info">
-                <span>
-                    <i class="iconfont icon-time"></i> 发表时间：2021-05-20
-                </span>
-                
-                    <span id="/2021/05/20/webpack-seo-optimized/" class="leancloud_visitors" data-flag-title="webpack项目使用prerender-spa-plugin实现vue单页面打包多页面SEO优化">
-                        <i class="iconfont icon-browse"></i> 阅读：<sapn class="leancloud-visitors-count"></span>
-                    </span>
-                
-                <span>
-                    <i class="iconfont icon-interactive"></i> 评论：<span class="valine-comment-count" data-xid="/2021/05/20/webpack-seo-optimized/"></span>
-                </span>
-            </div>
-            <div class="clear"></div>     
+    </div>
+    <div class="article-footer">
+        
+        
+        <div class="article-prev-next">
+            
+            
+                <a href="/2021/05/20/webpack-seo-optimized/" class="next-prefix">» </a> 下一篇：    <a href="/2021/05/20/webpack-seo-optimized/" title="发布于 2021-05-20 01:36">webpack项目使用prerender-spa-plugin实现vue单页面打包多页面SEO优化</a>
+            
         </div>
+    </div>
     
-        <div class="article">
-            <div class="article-title">
-                <a href="/2021/04/25/hello-world/">Hello World</a>
-                
-            </div>
-            <div class="article-abstract">
-                
-            </div>
-            <div class="clear"></div>
-            <div class="article-info">
-                <span>
-                    <i class="iconfont icon-time"></i> 发表时间：2021-04-25
-                </span>
-                
-                    <span id="/2021/04/25/hello-world/" class="leancloud_visitors" data-flag-title="Hello World">
-                        <i class="iconfont icon-browse"></i> 阅读：<sapn class="leancloud-visitors-count"></span>
-                    </span>
-                
-                <span>
-                    <i class="iconfont icon-interactive"></i> 评论：<span class="valine-comment-count" data-xid="/2021/04/25/hello-world/"></span>
-                </span>
-            </div>
-            <div class="clear"></div>     
+    <div class="article-comments">
+        <div class="comments-title">
+            评论列表
         </div>
-    
-        <div class="article">
-            <div class="article-title">
-                <a href="/2021/03/09/youdao-cloud/">2021.2项目问题总结</a>
-                
-            </div>
-            <div class="article-abstract">
-                
-            </div>
-            <div class="clear"></div>
-            <div class="article-info">
-                <span>
-                    <i class="iconfont icon-time"></i> 发表时间：2021-03-09
-                </span>
-                
-                    <span id="/2021/03/09/youdao-cloud/" class="leancloud_visitors" data-flag-title="2021.2项目问题总结">
-                        <i class="iconfont icon-browse"></i> 阅读：<sapn class="leancloud-visitors-count"></span>
-                    </span>
-                
-                <span>
-                    <i class="iconfont icon-interactive"></i> 评论：<span class="valine-comment-count" data-xid="/2021/03/09/youdao-cloud/"></span>
-                </span>
-            </div>
-            <div class="clear"></div>     
+        <div class="comments-content">
         </div>
-    
-    
+    </div>
+
 </div>
 
     </div>
